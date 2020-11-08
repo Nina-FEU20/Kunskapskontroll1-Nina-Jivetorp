@@ -79,7 +79,7 @@ btns[1].addEventListener('click', function () {
 
 // Make the "where we are" disappear when you click the third button
 btns[2].addEventListener('click', function () {
-    let footerArticles = document.querySelectorAll('section article');
+    let footerArticles = document.querySelectorAll('section article h3');
     footerArticles[1].style.display = 'none';
 
 })
@@ -97,20 +97,20 @@ for (let button of btns) {
 function resetAll() {
 
     // reset picture
-    let img = document.querySelectorAll('img');
-    img[2].src = "img/hoodie-ash.png";
+     let img = document.querySelectorAll('img');
+     img[2].src = "img/hoodie-ash.png";
 
-    let nameOfhoodies = document.querySelectorAll('h3');
-    nameOfhoodies[0].innerText = 'Ash';
+     let nameOfhoodies = document.querySelectorAll('h3');
+     nameOfhoodies[0].innerText = 'Ash';
 
     // reset random colors on background
-    let articles = document.querySelectorAll('article');
+    let articles = document.querySelectorAll('main article');
     for (let article of articles) {
         article.style.backgroundColor = 'white'; 
     }
-    articles[0].style.backgroundColor = 'white';
-    articles[1].style.backgroundColor = 'white';
-    articles[2].style.backgroundColor = 'white';
+    // articles[0].style.backgroundColor = 'white';
+    // articles[1].style.backgroundColor = 'white';
+    // articles[2].style.backgroundColor = 'white';
 
     // reset colors on buttons
     for (let button of btns) {
@@ -118,10 +118,10 @@ function resetAll() {
     }
 
     // reset "Where we are"
-    let footerArticles = document.querySelectorAll('section article');
+    let footerArticles = document.querySelectorAll('section article h3');
     footerArticles[1].style.display = 'block';
 
-    // make list disappar 
+    //make list disappar 
     let ul = document.querySelector('ul');
     if (ul) {
         ul.remove();
@@ -129,8 +129,8 @@ function resetAll() {
     onlyOnce = true;
 
     // reset border around products
-    let main = document.querySelector('main');
-    main.style.border = 'none';
+     let main = document.querySelector('main');
+     main.style.border = 'none';
 
     // reset contact
     contact.remove();

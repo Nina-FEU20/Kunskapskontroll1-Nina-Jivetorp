@@ -1,6 +1,7 @@
 # Kunskapskontroll1-Nina-Jivetorp
 
 Här är vart du hittar alla mina events! 
+Allting är click-events förutom user input som är keypress = enter! 
 
 RESET = SINUS-loggan högst upp till vänster!
 
@@ -20,4 +21,4 @@ Första knappen = Bilden ändras till den gröna hoodien, samt texten "ash" änd
 
 Andra knappen = Alla produkter får random bakgrundsfärger! Klicka flera gånger för att få olika färger. 
 
-Tredje knappen = "Where we are" och adressen i footer försvinner.  
+Tredje knappen = "Where we are" i footer försvinner.  
