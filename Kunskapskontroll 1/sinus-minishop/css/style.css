@@ -100,8 +100,7 @@ main article p {
     line-height: 140%;
 }
 
-main article button,
-.reset-btn {
+main article button {
     appearance: none;
     border: none;
     background: #222;
