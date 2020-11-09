@@ -108,9 +108,6 @@ function resetAll() {
     for (let article of articles) {
         article.style.backgroundColor = 'white'; 
     }
-    // articles[0].style.backgroundColor = 'white';
-    // articles[1].style.backgroundColor = 'white';
-    // articles[2].style.backgroundColor = 'white';
 
     // reset colors on buttons
     for (let button of btns) {
@@ -137,7 +134,7 @@ function resetAll() {
     oneContact = true;
 }
 
-/*********** functions ************/
+/*********** other functions ************/
 
 // function to make random colors! 
 const makeRandomColor = () => {
@@ -149,10 +146,15 @@ const makeRandomColor = () => {
 
 
 
+
 // function to create a list, that I call on the eventlistener
+
+// Note to self: Make several smaller functions next time. This function is to big! Not really useful if you wanted to make several lists at different places on site. Too much inline styling & repeating, in future add classes and the styling to that instead, but understood this assigment that we should do everything in JS. 
+
+
 function createList() {
 
-    const listItems = ['WISHLIST:', '- Skateboard', '- Longboard', '- Shirt', '- Pants', '- Shoes'];
+    const listItems = ['- Skateboard', '- Longboard', '- Shirt', '- Pants', '- Shoes'];
 
     // creating ul
     const ul = document.createElement('ul');
@@ -163,25 +165,41 @@ function createList() {
         li.innerText = listItems[i];
         ul.appendChild(li)
 
+        // creating remove-btn 
+        const removeMe = document.createElement('a'); 
+        removeMe.innerText = 'x'; 
+        li.appendChild(removeMe)
+
         // add styling to every li
         li.style.border = '1px solid black';
         li.style.margin = '0 auto';
         li.style.fontSize = '1rem';
         li.style.padding = '0.4rem';
+        li.style.display = 'flex'; 
+        li.style.justifyContent = 'space-between';  
+
+        removeMe.style.cursor = 'pointer'; 
+       
     }
 
     // Adding my list after main-section
+    const listTitle = document.createElement('h3'); 
+    listTitle.innerText = 'Wishlist: '; 
     const main = document.querySelector('main');
     main.insertAdjacentElement('afterend', ul);
+    main.insertAdjacentElement('afterend', listTitle);
+
+    // styling title
+    listTitle.style.width = '860px'; 
+    listTitle.style.margin = '0 auto';
+    listTitle.style.fontSize = '2rem'; 
 
     // styling ul
     ul.style.width = '900px'
     ul.style.margin = '0 auto';
     ul.style.listStyle = 'none';
     ul.style.marginBottom = '2rem';
-  
-    ul.children[0].style.fontSize = '2rem';
-    ul.children[0].style.border = 'none';
+
 
     // making an input so that the user can add things to list 
     let input = document.createElement('input');
@@ -191,11 +209,11 @@ function createList() {
     // styling input 
     input.style.width = '400px';
     input.style.padding = '0.4rem';
-    input.style.marginLeft = '1rem'; 
-    input.style.marginTop = '-2rem'; 
-
-    // appending input to list
-    ul.children[0].appendChild(input);
+    input.style.marginLeft = '10rem'; 
+    input.style.marginBottom = '0.5rem'; 
+    
+    // adding input after list Title
+    listTitle.insertAdjacentElement('beforeend', input)
 
     // Eventlistener to input. 
     // If user has written something and you press enter
@@ -207,6 +225,12 @@ function createList() {
             let li = document.createElement('li');
             let text = `- ${e.target.value}`;
             li.innerText = text;
+            
+            const removeMe = document.createElement('a'); 
+            removeMe.innerText = 'x'; 
+            li.appendChild(removeMe)
+
+            removeMe.style.cursor = 'pointer'; 
 
             // appending it to the existing ul 
             ul.appendChild(li);
@@ -216,9 +240,18 @@ function createList() {
             li.style.margin = '0 auto';
             li.style.fontSize = '1rem';
             li.style.padding = '0.4rem';
+            li.style.display = 'flex'; 
+            li.style.justifyContent = 'space-between'; 
 
             // to empty the input 
             e.target.value = '';
+        }
+    })
+
+    // creating remove-option! 
+    ul.addEventListener('click', function(e) {
+        if (e.target.nodeName === 'A') {
+            e.target.parentElement.remove(); 
         }
     })
 }
