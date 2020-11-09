@@ -1,13 +1,15 @@
 # Kunskapskontroll1-Nina-Jivetorp
 
 Här är vart du hittar alla mina events! 
-Allting är click-events förutom user input som är keypress = enter! 
+Allting är click-events förutom input som är keypress = enter! 
 
 RESET = SINUS-loggan högst upp till vänster!
 
 I min NAV hittar du följande: 
 
-HOME = Visar en "wishlist" som kommer efter produkterna på sidan. Har även lagt till en input så användaren kan själv lägga till produkter i listan utöver de jag redan hårdkodat in. Allt man lägger till hamnar i samma lista. 
+HOME = Visar en "wishlist" som kommer efter produkterna på sidan. Har även lagt till en input så användaren kan själv lägga till produkter i listan utöver de jag redan hårdkodat in. 
+(Skriv text i input rutan, tryck enter). 
+Allt man lägger till hamnar i samma lista. Genom att trycka på 'x' så kan man också ta bort saker från listan. 
 
 PRODUCTS =  Det kommer en dashed border runt alla produkterna! 
 
