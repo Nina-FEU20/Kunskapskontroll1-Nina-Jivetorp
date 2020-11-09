@@ -132,6 +132,13 @@ function resetAll() {
     // reset contact
     contact.remove();
     oneContact = true;
+
+    // remove listTite & input
+    let listTitle = document.querySelector('h4'); 
+    if (listTitle) {
+        listTitle.remove();
+    }
+     
 }
 
 /*********** other functions ************/
@@ -183,7 +190,7 @@ function createList() {
     }
 
     // Adding my list after main-section
-    const listTitle = document.createElement('h3'); 
+    const listTitle = document.createElement('h4'); 
     listTitle.innerText = 'Wishlist: '; 
     const main = document.querySelector('main');
     main.insertAdjacentElement('afterend', ul);
