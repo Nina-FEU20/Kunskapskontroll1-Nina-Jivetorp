@@ -15,7 +15,7 @@ PRODUCTS =  Det kommer en dashed border runt alla produkterna!
 
 CONTACT = En liten ruta kommer upp i mitten med påhittat nummer & emailadress! 
 
-I 'buy' sker följande: 
+På 'buy'-knapparna i main sker följande: 
 
 Alla knappar får en random färg när de klickas på! 
 
