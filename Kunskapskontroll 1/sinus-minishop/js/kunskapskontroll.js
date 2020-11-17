@@ -151,12 +151,9 @@ const makeRandomColor = () => {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-
-
-
 // function to create a list, that I call on the eventlistener
 
-// Note to self: Make several smaller functions next time. This function is to big! Not really useful if you wanted to make several lists at different places on site. Too much inline styling & repeating, in future add classes and the styling to that instead, but understood this assigment that we should do everything in JS. 
+// Note to self: Make several smaller functions next time. This function is to big and not really useful if you wanted to make several lists at different places on site. Too much inline styling & repeating, in future add classes and the styling to that instead, but understood this assigment that we should do everything in JS. 
 
 
 function createList() {
